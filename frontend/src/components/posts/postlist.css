@@ -1,0 +1,60 @@
+/*  MAIN POST LIST  */
+
+.postlist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+
+/* FEED HEADER */
+
+.feed-header{
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.feed-header h2{
+
+    color:#111827;
+}
+
+
+/*  LOADING */
+
+.loading-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+
+
+.empty-post{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}

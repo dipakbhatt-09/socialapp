@@ -1,0 +1,58 @@
+.notification {
+    max-width: 650px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.notification h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* EMPTY STATE */
+.notification p {
+    text-align: center;
+    color: #777;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+/* EACH NOTIFICATION ITEM */
+.noti-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #f8f9fb;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* hover effect */
+.noti-item:hover {
+    background: #eef2ff;
+    transform: translateX(3px);
+}
+
+/* sender name */
+.noti-item b {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* icon style (optional future upgrade) */
+.noti-item::before {
+    content: "🔔";
+    margin-right: 6px;
+}

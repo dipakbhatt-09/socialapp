@@ -1,0 +1,152 @@
+
+
+
+.profile-page {
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* COVER */
+.cover-container {
+    position: relative;
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    background: #ccc;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PROFILE IMAGE */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 5px solid white;
+    background: white;
+
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* INFO CARD */
+.info-card {
+    max-width: 750px;
+    margin: 100px auto 40px;
+    background: white;
+
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* EMAIL */
+.email {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+/* GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    text-align: left;
+    margin: 20px 0;
+}
+
+.info-grid p {
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+.edit-btn {
+    background: #1877f2;
+    color: white;
+
+    border: none;
+    padding: 10px 18px;
+
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn:hover {
+    background: #0f5bd1;
+}
+
+/* EDIT FORM */
+.edit-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-box input,
+.edit-box textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.edit-box textarea {
+    min-height: 80px;
+    resize: none;
+}
+
+/* SAVE */
+.save-btn {
+    background: #42b72a;
+    color: white;
+
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background: #36a420;
+}
+
+/* LOADING */
+.loading {
+    text-align: center;
+    padding: 50px;
+}
+
+/*follow button */
+
+.follow-btn{
+    background:#1877f2;
+    color:white;
+    border:none;
+    padding:10px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    margin-top:12px;
+    transition:0.3s;
+}
+
+.follow-btn:hover{
+    background:#0f5bd1;
+}

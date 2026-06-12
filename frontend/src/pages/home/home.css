@@ -1,0 +1,11 @@
+.home{
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+.feed-section{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}

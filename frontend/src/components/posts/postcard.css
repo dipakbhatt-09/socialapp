@@ -1,0 +1,105 @@
+.postcard{
+    background:white;
+    border-radius:14px;
+    padding:15px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    transition:0.2s;
+}
+
+.postcard:hover{
+    transform:translateY(-2px);
+}
+
+/* HEADER */
+.post-header{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.post-avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#1877f2;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* CONTENT */
+.post-content{
+    font-size:15px;
+    margin:10px 0;
+}
+
+/* ACTIONS */
+.post-actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+}
+
+.post-actions button{
+    border:none;
+    padding:6px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    background:#f3f3f3;
+    transition:0.2s;
+}
+
+.post-actions button:hover{
+    background:#e4e4e4;
+}
+
+/* LIKE ACTIVE */
+.like-btn.active{
+    background:#ffe3e3;
+    color:red;
+}
+
+/* COMMENT BOX */
+.comment-box{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+
+.comment-box input{
+    flex:1;
+    padding:8px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+.comment-box button{
+    background:#1877f2;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* COMMENTS */
+.comment-list{
+    margin-top:10px;
+}
+
+.comment-item{
+    background:#f8f9fb;
+    padding:6px 10px;
+    border-radius:8px;
+    margin-top:5px;
+}
+
+.view-more{
+    color:#1877f2;
+    cursor:pointer;
+    margin-top:5px;
+    font-size:13px;
+}

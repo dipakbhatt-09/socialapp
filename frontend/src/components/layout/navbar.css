@@ -1,0 +1,82 @@
+.navbar{
+    height:65px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* LEFT */
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    cursor:pointer;
+}
+
+.logo{
+    font-weight:700;
+    color:#1877f2;
+    font-size:24px;
+    letter-spacing:0.5px;
+}
+
+/* PROFILE ICON  */
+.mini-profile{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    overflow:hidden;
+    cursor:pointer;
+    border:2px solid #1877f2;
+    transition:0.3s;
+}
+
+.mini-profile:hover{
+    transform:scale(1.05);
+}
+
+.mini-profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CENTER */
+.nav-center{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-item{
+    cursor:pointer;
+    padding:10px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.nav-item:hover{
+    background:#f0f2f5;
+    transform:translateY(-1px);
+}
+
+/* RIGHT */
+.logout-btn{
+    background:#1877f2;
+    color:white;
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.logout-btn:hover{
+    background:#0f5bd1;
+} 
