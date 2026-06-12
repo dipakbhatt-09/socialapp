@@ -7,8 +7,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY
-
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-7ku=4zv6(p26c5jf&z%)r^lpcmvc%g7u2d=q6nz+!enaeplj+6"
+)
 
 DEBUG = False
 
@@ -108,15 +110,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # DATABASE 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("DB_NAME"),
-        'USER': os.environ.get("DB_USER"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("DB_HOST"),
-        'PORT': os.environ.get("DB_PORT", "5432"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
