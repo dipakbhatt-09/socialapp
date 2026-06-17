@@ -51,7 +51,7 @@
     font-weight: 600;
 }
 
-/* icon style (optional future upgrade) */
+/* icon style  */
 .noti-item::before {
     content: "🔔";
     margin-right: 6px;

@@ -1,32 +1,26 @@
-import { useState } from "react"
-import { loginUser } from "../../api/auth"
+import { useState, useContext } from "react"
 import { useNavigate, Link } from "react-router-dom"
+import { AuthContext } from "../../context/AuthContext"
 import "./login.css"
 
 function Login() {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
     const navigate = useNavigate()
+    const { login } = useContext(AuthContext)
 
     const handleLogin = async (e) => {
         e.preventDefault()
 
-        try {
-            const res = await loginUser({
-                username,
-                password
-            })
+        const result = await login(username, password)
 
-            localStorage.setItem("token", res.data.access)
-            localStorage.setItem("refresh", res.data.refresh)
-
+        if (result.success) {
             alert("Login Success")
-
             navigate("/")
-
-        } catch (error) {
-            console.log(error.response?.data)
+        } else {
+            console.log(result.error)
             alert("Login Failed")
         }
     }

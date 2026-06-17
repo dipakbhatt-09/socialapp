@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react"
+import { createContext, useState } from "react"
 import { loginUser } from "../api/auth"
 
 export const AuthContext = createContext()
@@ -15,19 +15,24 @@ function AuthProvider({ children }) {
 
     const login = async (username, password) => {
         try {
-
             const res = await loginUser({ username, password })
 
-            localStorage.setItem("access", res.data.access)
-            localStorage.setItem("refresh", res.data.refresh)
+            const access = res.data.access
+            const refresh = res.data.refresh
 
-            setAccessToken(res.data.access)
+            localStorage.setItem("access", access)
+            localStorage.setItem("refresh", refresh)
+
+            setAccessToken(access)
             setIsAuthenticated(true)
 
             return { success: true }
 
         } catch (err) {
-            return { success: false, error: err }
+            return {
+                success: false,
+                error: err.response?.data || err.message
+            }
         }
     }
 
