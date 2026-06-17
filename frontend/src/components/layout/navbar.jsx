@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Home, Search, Bell, User, LogOut } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import api from "../../api/axios"
-import "./Navbar.css"
+import "./navbar.css"
 
 function Navbar() {
 
