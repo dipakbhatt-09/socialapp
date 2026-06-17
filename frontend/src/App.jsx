@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Navbar from "./components/layout/Navbar"
+import Navbar from "./components/layout/navbar";
 import ProtectedRoute from "./components/ProtectedRoute"
 
 import Home from "./pages/home/home"
 import Profile from "./pages/profile/profile"
-import Login from "./pages/auth/Login"
-import Register from "./pages/auth/Register"
-
-import Notification from "./pages/notifications/notification.jsx";
+import Login from "./pages/auth/login";
+import Register from "./pages/auth/register";
+import Notification from "./pages/notifications/notification";
 import Search from "./pages/search/search"
 
 function App() {
