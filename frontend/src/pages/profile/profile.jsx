@@ -34,7 +34,7 @@ function Profile() {
     const [following, setFollowing] = useState(false)
     const [followersCount, setFollowersCount] = useState(0)
 
-    const BASE = "http://127.0.0.1:8000"
+    const BASE = "https://socialapp-3552.onrender.com"
 
     //  FETCH PROFILE
     const fetchProfile = async () => {

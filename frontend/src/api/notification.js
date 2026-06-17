@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "http://127.0.0.1:8000/api/notifications/"
+const BASE_URL = "https://socialapp-3552.onrender.com/api/notifications/"
 
 const getToken = () => localStorage.getItem("token")
 

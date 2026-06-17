@@ -6,7 +6,9 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # SECURITY
+
 SECRET_KEY = os.environ.get(
     "SECRET_KEY",
     "django-insecure-7ku=4zv6(p26c5jf%z%)r^lpcmvc%g7u2d=q6nz+!enaeplj+6"
@@ -15,13 +17,16 @@ SECRET_KEY = os.environ.get(
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "localhost",
     "127.0.0.1",
+    "localhost",
+    "socialapp-3552.onrender.com",
     ".onrender.com",
 ]
 
 
+
 # APPLICATIONS
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,11 +51,12 @@ INSTALLED_APPS = [
     'search',
 ]
 
-
 AUTH_USER_MODEL = 'accounts.User'
 
 
+
 # REST FRAMEWORK
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -60,6 +66,8 @@ REST_FRAMEWORK = {
 }
 
 
+# JWT SETTINGS
+
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
@@ -68,7 +76,9 @@ SIMPLE_JWT = {
 }
 
 
+
 # MIDDLEWARE
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -87,7 +97,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'backend.urls'
 
 
+
 # TEMPLATES
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -107,7 +119,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-# DATABASE (POSTGRES + SQLITE fallback)
+
+# DATABASE
+
 DATABASES = {
     'default': dj_database_url.config(
         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
@@ -115,7 +129,9 @@ DATABASES = {
 }
 
 
+
 # PASSWORD VALIDATION
+
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -124,14 +140,18 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # INTERNATIONALIZATION
+
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
 
+
 # STATIC / MEDIA
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
@@ -141,5 +161,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-# CORS (FRONTEND)
-CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS / CSRF (FRONTEND)
+
+CORS_ALLOWED_ORIGINS = [
+    "https://socialapp-six-mu.vercel.app",
+    "http://localhost:5173",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://socialapp-six-mu.vercel.app",
+]

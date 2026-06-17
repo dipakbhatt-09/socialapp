@@ -29,7 +29,7 @@ function Navbar() {
         navigate("/login")
     }
 
-    const BASE = "http://127.0.0.1:8000"
+    const BASE = "https://socialapp-3552.onrender.com"
 
     return (
         <div className="navbar">

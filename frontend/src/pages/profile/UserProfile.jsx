@@ -10,7 +10,7 @@ function UserProfile() {
     const [profile, setProfile] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const BASE = "http://127.0.0.1:8000"
+    const BASE = "https://socialapp-3552.onrender.com"
 
     const fetchProfile = async () => {
         try {
