@@ -8,7 +8,7 @@ import Profile from "./pages/profile/profile"
 import Login from "./pages/auth/Login"
 import Register from "./pages/auth/Register"
 
-import Notification from "./pages/notifications/Notification"
+import Notification from "./pages/notifications/notification.jsx";
 import Search from "./pages/search/search"
 
 function App() {
